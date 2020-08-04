@@ -5,7 +5,7 @@ import shutil
 # Gets the folder path to organize
 folderPath = sys.argv[1]
 
-# Goes to specified folder
+# Goes to the specified folder
 os.chdir(folderPath)
 
 # Creates the 4 organizational folders
@@ -16,6 +16,7 @@ os.mkdir('./DownloadedMisc')
 
 # # Scans all the files types and move them to the correct folder
 for file in os.listdir(folderPath):
+    # If the file is a folder the program will ignore it
     if os.path.isdir(folderPath+'/'+file):
         continue
     if file.endswith(".png") or file.endswith(".jpg") or file.endswith(".tiff") or file.endswith(".svg"):
@@ -26,3 +27,5 @@ for file in os.listdir(folderPath):
         shutil.move(file, './DownloadedAudios')
     else:
         shutil.move(file, './DownloadedMisc')
+        
+print("CLEANUP COMPLETED !!!")
