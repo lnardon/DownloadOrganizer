@@ -1,6 +1,6 @@
 # Download Organizer
 
-A little script that organizes your files inside the Downloads folder
+A little script that organizes your files inside the Downloads folder (or any other folder)
 
 ## Demo
 
